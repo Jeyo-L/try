@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap');
+
+body {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #eaeaea;
+    line-height: 1.6;
+}
+
+
+
+
+:root {
+    --dark-bg: #1a1a2e;
+    --dark-bg-light: #24243e;
+    --accent-color: #ff9800;
+    --text-light: #ffffff; 
+    --text-muted: #d3d3d3;
+    --black-color: #000100;
+}
+
+
+body {
+    background-color: var(--dark-bg);
+}
+
+.container { 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin: 0 0 10px;
+    color: var(--text-light); 
+}
+
+p {
+    color: var(--text-muted);
+}
+
+
+.btn-accent {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-accent:hover {
+    background: #e88e00;
+}
+
+.btn-outline {
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--dark-bg);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin: 10px 0 20px;
+}
+#head1{
+    background-image: url('./1.jpg');
+}
+.dark-bg-light {
+    background-color: var(--dark-bg-light);
+    padding: 40px 20px;
+}
+
+.dark-bg-accent {
+    background: var(--accent-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+
+.course-grid, .features-grid, .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+
+.course-card, .feature-item {
+    background: var(--black-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: var(--text-light);
+}
+
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 5px 5px;
+    background: var(--dark-bg);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #160902;
+    z-index: 10;
+}
+
+.nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1129px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.nav_logo {
+    color: white;
+    font-weight: 500; 
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link i {
+    font-size: 1.2rem;
+}
+
+.nav-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-toogle {
+    display: none; 
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-close, .nav-toggle {
+    display: none; 
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        height: 100vh;
+        width: 250px;
+        background-color: black;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 2rem;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-menu.show {
+        right: 0; 
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-close {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .nav-logo {
+        color: white;
+    }
+}

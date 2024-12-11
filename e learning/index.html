@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <title>Skills-Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav_logo">Skills-Pro</a>
+            <div class="nav-menu" id="nav-menu">
+                <!-- Close Button -->
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>About Us</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>Courses</span></a></li>
+                    <li class="nav-item"><a href="../quiz/signup.html" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>Register</span></a></li>
+                    <li class="nav-item"><a href="../quiz/quiz.html" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>Quiz</span></a></li>
+                </ul>
+                <div class="nav-social">
+                    <li style="color: white;">follow us on</li>
+                    <a href="https://www.instagram.com/" target="_blank" class="nav-social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="https://www.github.com/" target="_blank" class="nav-social-link"><i class="ri-github-line"></i></a>
+                    <a href="https://www.dribbble.com/" target="_blank" class="nav-social-link"><i class="ri-dribbble-line"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="nav-social-link"><i class="ri-linkedin-box-line"></i></a>
+                </div>
+            </div>
+            <!-- Toggle Button -->
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <header class="hero dark-bg" id="head1">
+            <div class="container">
+                <h1>Master Skills with SkillsPro</h1>
+                <p>Empower yourself with industry-relevant courses and practical projects.</p>
+                <a href="#courses" class="btn-accent">Browse Courses</a>
+            </div>
+        </header>
+    
+        <!-- Courses Section -->
+        <section id="courses" class="dark-bg-light">
+            <div class="container">
+                <h2 class="section-title">Browse Courses</h2>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <h3>Web Development</h3>
+                        <p>Build modern, responsive websites from scratch.</p>
+                        <a href="#" class="btn-outline">Learn More</a>
+                    </div>
+                    <div class="course-card">
+                        <h3>Cybersecurity</h3>
+                        <p>Protect systems against the latest cyber threats.</p>
+                        <a href="#" class="btn-outline">Learn More</a>
+                    </div>
+                    <div class="course-card">
+                        <h3>Internet of Things (IoT)</h3>
+                        <p>Connect and automate smart devices effortlessly.</p>
+                        <a href="#" class="btn-outline">Learn More</a>
+                    </div>
+                    <div class="course-card">
+                        <h3>Digital Marketing</h3>
+                        <p>Drive growth with advanced marketing techniques.</p>
+                        <a href="#" class="btn-outline">Learn More</a>
+                    </div>
+                    <div class="course-card">
+                        <h3>Social Media</h3>
+                        <p>Grow your influence across social platforms.</p>
+                        <a href="#" class="btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Features Section -->
+        <section id="features" class="dark-bg">
+            <div class="container">
+                <h2 class="section-title">Why Choose SkillsPro?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Interactive Learning</h3>
+                        <p>Engage with practical exercises and real-world scenarios.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Expert Instructors</h3>
+                        <p>Learn from industry professionals with hands-on experience.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Job-Ready Skills</h3>
+                        <p>Gain skills that employers are looking for in the modern workforce.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Testimonials Section -->
+        <section class="dark-bg-light">
+            <div class="container">
+                <h2 class="section-title">What Our Learners Say</h2>
+                <div class="testimonials-grid">
+                    <blockquote>
+                        <p>"The Web Development course was perfect for me! Now I have a job I love."</p>
+                        <cite>- Nkiwe Soko</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"The cybersecurity lessons gave me the confidence to handle real-world challenges."</p>
+                        <cite>- Abdul Kareem</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Call-to-Action Section -->
+        <section class="cta dark-bg-accent">
+            <div class="container">
+                <h2>Ready to Start?</h2>
+                <p>Join millions of learners and kickstart your journey today.</p>
+                <a href="#" class="btn-accent">Get Started</a>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="dark-bg">
+            <div class="container">
+                <p>&copy; 2024 SkillsPro. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('nav-toggle');
+            const close = document.getElementById('nav-close');
+            const menu = document.getElementById('nav-menu');
+
+            // Show menu
+            toggle.addEventListener('click', function () {
+                menu.classList.add('show');
+            });
+
+            // Hide menu
+            close.addEventListener('click', function () {
+                menu.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>

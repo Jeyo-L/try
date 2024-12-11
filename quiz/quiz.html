@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test Your Skills</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<style>
+    .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #160902;
+        z-index: 10;
+    }
+
+    .nav.container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1129px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .nav_logo {
+        color: white;
+        font-weight: 500; 
+        text-decoration: none;
+        font-size: 1.7rem;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin: 0 1rem;
+    }
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-link i {
+        font-size: 1.2rem;
+    }
+
+    .nav-social {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .nav-social-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .nav-toogle {
+        display: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav-close, .nav-toggle {
+        display: none; 
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav_logo">Skills-Pro</a>
+            <div class="nav-menu" id="nav-menu">
+                <!-- Close Button -->
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>About Us</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>Courses</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>Register</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="ri-arrow-right-up-line"></i><span>Quiz</span></a></li>
+                </ul>
+                <div class="nav-social">
+                    <li style="color: white;">follow us on</li>
+                    <a href="https://www.instagram.com/" target="_blank" class="nav-social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="https://www.github.com/" target="_blank" class="nav-social-link"><i class="ri-github-line"></i></a>
+                    <a href="https://www.dribbble.com/" target="_blank" class="nav-social-link"><i class="ri-dribbble-line"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="nav-social-link"><i class="ri-linkedin-box-line"></i></a>
+                </div>
+            </div>
+            <!-- Toggle Button -->
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+    <div id="form-box">
+        <form>
+            <select id="course">
+                <option value="WEBDEV" selected="selected">WEB Development</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="IoT">Internet of Things</option>
+                <option value="DigitalMaketing">Digital Marketing</option>
+                <option value="SocialMedia">Social Media</option>
+            </select> 
+            <a href="#lb3" class="choose-lang">Start Quiz</a>
+        </form>
+    </div>    
+</div>
+
+<div class="quiz">
+    
+    <div id="info">
+        <div id="score">Score: 0</div>
+        <div id="ques-left">Question: 1/20</div>
+    </div>
+    <div id="ques-view">
+    </div>
+    <div class="question">
+        <h1>Question</h1>
+    </div>
+    
+    <div class="choice">
+        <div class="options"><input type="radio" name="options" value="option1" id="opt0"><label for="opt0" id="lb0">Option 1</label></div>
+        <div class="options"><input type="radio" name="options" value="option2" id="opt1"><label for="opt1" id="lb1">Option 2</label></div>
+        <div class="options"><input type="radio" name="options" value="option3" checked="checked" id="opt2"><label for="opt2" id="lb2">Option 3</label></div>
+        <div class="options"><input type="radio" name="options" value="option4" id="opt3"><label for="opt3" id="lb3">Option 4</label></div>   
+    </div>
+
+    <div class="ans-btn">
+        <button type="button" class="submit-answer">Next Question</button>
+        <a href="#display-final-score" type="button" class="view-results">Results</a>
+    </div>
+
+</div>
+
+    <div class="final-result">
+        <h1>The Quiz is Over</h1>
+        <div class="solved-ques-no">You Solved 10 questions of HTML</div>
+        <div class="right-wrong">3 Were Right and 4 were Wrong</div>
+        <div id="display-final-score">Your Final Score is: 35</div>
+        <div class="remark">Remark: Satisfactory, Keep trying.</div>
+        <button id="restart">Restart Quiz</button>        
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<script>
+    
+</script>
+</body>
+</html>
